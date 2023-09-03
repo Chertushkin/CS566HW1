@@ -17,7 +17,12 @@ from typing import List
 
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        # TODO: implement your code
+        seen = set()
+        for n in nums:
+            if n in seen:
+                return True
+            seen.add(n)
+        return False
 
 """### Do not modify the testing code below. If you get message "Mistake in test case #", it means that you algorithm is incorrect."""
 
